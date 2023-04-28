@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="logo">
+            <div class="container">
+                <p>Movie<span>Finder</span></p>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <div class="search-element">
+                <h3>Search movie:</h3>
+                <input type="text" class="form-control" placeholder="Search Movie Title ..." id="movie-search-box" onkeyup="findMovies()" onclick = "findMovies()">
+
+                <div class="search-list" id="search-list">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="overlay"></div>
+        <div class="about">About me</div>
+        <p class="about-us">My Name is Liza and this is my movie project on JS showing my knowledge of using JSON and API</p>
+        <div class="container">
+            <div id="loader" class="loader" style="display:none;">
+                <div class="inner one"></div>
+                <div class="inner two"></div>
+                <div class="inner three"></div>
+              </div>
+            <div class="result-container">
+                <div class="result-grid" id="result-grid">
+                    <div class="movie-poster">
+                        <img src="" alt="movie-poster">
+                    </div>
+                    
+                    <button class="close-button" onclick="Close()">Close</button>
+                    
+                    <div class="movie-info">
+                        <h3 class="movie-title"></h3>
+                        <ul class="movie-misc-info">
+                            <li class="year"></li>
+                            <li class="rated"></li>
+                            <li class="released"></li>
+                        </ul>
+                        <p class="genre"><b></b></p>
+                        <p class="writer"><b></b></p>
+                        <p class="actors"><b></b></p>
+                        <p class="plot"><b></b></p>
+                        <p class="language"><b></b></p>
+                        <p class="awards">
+                            <b>
+                                <i class="fasfa-award">
+                                    <b></b>
+                                </i>
+                            </b>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
